@@ -619,108 +619,54 @@ section img {
     margin-top: 0px;
     
 }
-.page-error {
+
+.error-container {
     text-align: center;
 }
-.page-error h1 {
-    font-size: 5em;
-    margin: 0;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: rgb(235, 241, 74);
-}
-.page-error p {
-    font-size: 1.5em;
-    margin: 0;
-    color: white;
-    margin-bottom: 40px;
-}
 
-@keyframes blinkText {
-    0%, 50%, 100% {
-      opacity: 1;
-      color: red; 
-    }
-    2.5% {
-      color: orange;
-    }
-    5% {
-      color: yellow;
-    }
-    7.5% {
-      color: greenyellow;
-    }
-    10% {
-      color: lime;
-    }
-    12.5% {
-      color: springgreen;
-    }
-    15% {
-      color: aqua;
-    }
-    17.5% {
-      color: rgb(92, 185, 216);
-    }
-    20% {
-      color: rgb(30, 255, 64);
-    }
-    22.5% {
-      color: rgb(25, 255, 33);
-    }
-    25% {
-      color: rgb(208, 0, 255);
-    }
-    27.5% {
-      color: rgb(215, 180, 42);
-    }
-    30% {
-      color: rgb(0, 205, 154);
-    }
-    32.5% {
-      color: rgb(223, 20, 209);
-    }
-    35% {
-      color: rgb(240, 80, 162);
-    }
-    37.5% {
-      color: rgb(91, 235, 243);
-    }
-    40% {
-      color: rgb(97, 234, 255);
-    }
-    42.5% {
-      color: rgb(20, 107, 220);
-    }
-    45% {
-      color: rgb(173, 34, 178);
-    }
-    47.5% {
-      color: rgb(236, 72, 239);
-    }
-    50% {
-      color: rgba(0, 255, 72, 0.792);
-    }
-
-  }
-   
-.error-text {
-    animation: blinkText 20s infinite;
-    font-size: 20px;
+.error-container h1 {
+    font-size: 3em;
+      
+}
+.error-container .blink {
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
     0%, 100% {
-        opacity: 1;
+      opacity: 1;
     }
     50% {
-        opacity: 0;
+      opacity: 0;
     }
-}
+  }
+  
+  #description {
+    font-size: 1.5em;
+    animation: changeColor 2s infinite;
+    margin-bottom: 20px;
+  }
+@keyframes changeColor {
+    0%, 100% {
+      color: #ff6384;
+    }
+    10%, 30%, 50%, 70%, 90% {
+      color: #ffa07a;
+    }
+    20%, 40%, 60%, 80% {
+      color: #ffd700;
+    }
+  }
+  
+.info-container {
+    margin-top: 20px;
+  }
+  
+#ip-address, #browser-details {
+    font-size: 1em;
+  }
+  
 
-.page-error h3  {
-    animation: blink 1s infinite;
-}
 .home-button{
      background-color: rgb(243, 218, 243);
      border: none;
