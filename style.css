@@ -101,7 +101,7 @@ nav {
 }
 .clock-fn p {
     margin-top: 4px;
-    color: rgb(255, 0, 0);
+    color: red;
 }
 .timer {
     width: 20px;
