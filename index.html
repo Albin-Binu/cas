@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <title>IHRD || CAS Mukkom</title>
 </head>
 <body>
@@ -19,7 +21,10 @@
             <box-icon class="symbol" type='logo' name='gmail'></box-icon>
             <p>casthiruvambadi.ihrd@gmail.com</p>
           </div>
-           
+          <div class="clock-fn">
+            <box-icon class="timer" type='solid' name='time-five'></box-icon>
+            <p id="clock"></p>
+          </div>
         </div>
 
         <div class="conatiner" id="main-header">
@@ -203,6 +208,8 @@
     </div>
     <div class="important-links">
       <h3><i>Important Links</i></h1>
+      <a href="#" onclick="showPopup()">Show User Information</a>
+      <br>
       <a href="http://www.ihrd.ac.in/" target="_blank">IHRD</a>
       <br>
       <a href="https://www.uoc.ac.in/" target="_blank">Technical Education</a>
@@ -211,16 +218,31 @@
       <br>
       <a href="https://kerala.gov.in/" target="_blank">Goverment Of Kerala</a>
     </div>
+    <!--popup-->
+    <div id="popup">
+      <h2>User Information:</h2>
+      <p><strong>IP Address:</strong> <span id="ipAddress"></span></p>
+      <p><strong>Browser:</strong> <span id="browser"></span></p>
+      <p><strong>Timezone:</strong> <span id="timezone"></span></p>
+      <p><strong>Operating System:</strong> <span id="os"></span></p>
+      <a href="#" onclick="hidePopup()">Close</a>
+  </div>
   </div>
   <div class="copyright">
     <div class="cr-text">
        <p> <box-icon class="cprsy" name='copyright'></box-icon> Copyright 2024 College Of Applied Science mukkom</p>
+        <p id="last-updated"></p>
     </div>
-    
   </div>
 </footer>
-    <script>
 
+<div class="loading-container">
+  <div class="netflix-spinner"></div>
+  <p class="loading-caption">Loading...</p>
+</div>
+
+    <script>
+/*1st*/
         let slideIndex = 1;
         showSlides(slideIndex);
         
@@ -249,7 +271,7 @@
         }
        
 /*2nd*/
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     var header = document.getElementById('main-header');
     var overlay = document.getElementById('overlay');
     
@@ -263,6 +285,18 @@
         }
     });
 });
+
+/* 3rd */
+
+// Function to hide the loading animation
+function hideLoadingAnimation() {
+    document.querySelector('.loading-container').style.display = 'none';
+}
+
+// Call the function after a delay (e.g., 10 seconds)
+setTimeout(hideLoadingAnimation, 720); // 10000 milliseconds (10 seconds) delay
+
         </script>
+        
 </body>
 </html>
